@@ -216,7 +216,7 @@ h1 {
 }
 
 .booking-logo {
-  width: min(240px, 50vw);
+  width: min(320px, 70vw);
   display: block;
   margin: 1rem auto;
 }
@@ -312,10 +312,52 @@ h1 {
   box-sizing: border-box;
 }
 
+.fees-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 2.5rem 0 1rem;
+}
+
+.fees-cards .card {
+  text-align: center;
+}
+
+.fees-intro {
+  max-width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.fees-policy {
+  text-align: center;
+  margin: 0 auto 1.5rem;
+  max-width: 100%;
+}
+
+.fees-policy ul {
+  margin: 0.5rem auto 1rem;
+  padding-left: 0;
+  list-style-position: inside;
+  color: var(--muted);
+  display: inline-block;
+  text-align: left;
+}
+
+.fees-policy p,
+.fees-policy li {
+  color: var(--muted);
+}
+
 @media (max-width: 900px) {
   .services-cards .card {
     flex: 0 1 calc(50% - 0.5rem);
     max-width: calc(50% - 0.5rem);
+  }
+
+  .fees-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -323,6 +365,10 @@ h1 {
   .services-cards .card {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  .fees-cards {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -344,7 +390,8 @@ h1 {
     padding: 1.25rem 1rem 2rem;
   }
 
-  .brand-logo {
+  .brand-logo,
+  .booking-logo {
     width: min(240px, 72vw);
     margin-bottom: 0.5rem;
   }
@@ -422,6 +469,10 @@ a.card:hover {
   margin: 1.25rem auto 2rem;
   max-width: 900px;
   text-align: center;
+}
+
+.contact-crisis {
+  margin-top: 3.5rem;
 }
 
 .crisis-notice h3 {

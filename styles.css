@@ -298,6 +298,34 @@ h1 {
   padding: 2.5rem 0;
 }
 
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.services-cards .card {
+  flex: 0 1 calc(25% - 0.75rem);
+  max-width: calc(25% - 0.75rem);
+  min-width: 180px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .services-cards .card {
+    flex: 0 1 calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+  }
+}
+
+@media (max-width: 700px) {
+  .services-cards .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 .cards.home-cards {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   padding-top: 2rem;
@@ -377,7 +405,7 @@ h1 {
   color: var(--muted);
 }
 
-.card:hover {
+a.card:hover {
   border-color: #bec8c0;
   transform: translateY(-1px);
 }

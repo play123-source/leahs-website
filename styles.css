@@ -99,7 +99,7 @@ img {
   display: grid;
   grid-template-columns: minmax(216px, 336px) 1fr;
   gap: 1.5rem;
-  align-items: start;
+  align-items: center;
   margin-top: 2rem;
   max-width: 900px;
   margin-left: auto;
@@ -219,6 +219,40 @@ h1 {
   width: min(240px, 50vw);
   display: block;
   margin: 1rem auto;
+}
+
+.about-feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  justify-items: center;
+  margin: 1.5rem auto 0;
+  text-align: left;
+}
+
+.about-feature-photo {
+  width: min(280px, 70vw);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 28px rgba(61, 71, 66, 0.12);
+  display: block;
+  background: #f4f2ef;
+}
+
+.about-feature-copy {
+  width: 100%;
+}
+
+.about-feature-copy p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.about-feature-copy p:last-child {
+  margin-bottom: 0;
 }
 
 .btn {

@@ -221,6 +221,45 @@ h1 {
   margin: 1rem auto;
 }
 
+.booking-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2rem auto 1.5rem;
+  max-width: 900px;
+  text-align: left;
+}
+
+.booking-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.booking-box h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.booking-box p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.booking-box .btn {
+  margin-top: auto;
+  align-self: center;
+}
+
+@media (max-width: 700px) {
+  .booking-boxes {
+    grid-template-columns: 1fr;
+  }
+}
+
 .about-feature {
   display: grid;
   grid-template-columns: 1fr;
@@ -324,7 +363,8 @@ h1 {
 }
 
 .fees-intro {
-  max-width: 75ch;
+  max-width: 100%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -475,6 +515,17 @@ a.card:hover {
   margin-top: 3.5rem;
 }
 
+.contact-details {
+  max-width: 70ch;
+  margin: 0 auto 1rem;
+  text-align: left;
+}
+
+.contact-details p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
 .crisis-notice h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -508,6 +559,85 @@ a.card:hover {
 
 .site-footer p {
   margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--brand-dark);
+  text-decoration: underline;
+}
+
+.footer-info-icon {
+  color: #8a8f8c;
+}
+
+.legal-content {
+  text-align: left;
+  max-width: 75ch;
+  margin: 0 auto 1.5rem;
+}
+
+.legal-content p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.legal-content h2 {
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+.legal-lead {
+  text-align: center;
+}
+
+.legal-content ol {
+  color: var(--muted);
+  margin: 0 0 1rem;
+  padding-left: 1.4rem;
+}
+
+.legal-content ol ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0 0;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.legal-table th,
+.legal-table td {
+  border: 1px solid var(--border);
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal-table th {
+  background: #f8f6f2;
+  color: #4c5751;
+  font-weight: 600;
 }
 
 .booking-frame {

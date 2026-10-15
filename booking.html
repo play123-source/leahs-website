@@ -26,24 +26,14 @@
       <section class="booking-boxes" aria-label="Booking options">
         <article class="card booking-box">
           <h2>New Clients</h2>
-          <p>
-            We'd love to discuss your needs and ensure Leah will be a good fit
-            for you.
-          </p>
-          <p>
-            Please click on the button below to send us an email and we'll be in
-            contact within two business days to discuss your needs.
-          </p>
-          <a class="btn primary" href="mailto:hello@withinpsych.com.au"
-            >Email Enquiry</a
-          >
+          <p>Please complete the enquiry form below to get in touch.</p>
         </article>
 
         <article class="card booking-box">
           <h2>Existing Clients</h2>
           <p>
-            If you need to make a new appointment or edit an existing booking,
-            please use the client portal via the below button.
+            You can book your next appointment or edit a current booking through
+            our client portal here.
           </p>
           <a
             class="btn primary"
@@ -54,6 +44,91 @@
           >
         </article>
       </section>
+
+      <p id="enquiry-sent" class="enquiry-sent" hidden tabindex="-1">
+        Thank you. Your enquiry has been sent. We aim to reply within two
+        business days.
+      </p>
+
+      <form
+        class="enquiry-form"
+        action="https://formsubmit.co/hello@withinpsych.com.au"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New client enquiry — Within Psychology and Assessment"
+        />
+        <input type="hidden" name="_template" value="table" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://play123-source.github.io/leahs-website/booking.html?sent=1"
+        />
+
+        <div class="form-grid">
+          <label>
+            Full name*
+            <input type="text" name="full_name" required autocomplete="name" />
+          </label>
+          <label>
+            Email address*
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label>
+            Phone number*
+            <input type="tel" name="phone" required autocomplete="tel" />
+          </label>
+          <label>
+            Type of service
+            <select name="service_type">
+              <option value="">Please select</option>
+              <option>Individual psychology</option>
+              <option>Couples therapy</option>
+              <option>Psychological assessment</option>
+              <option>Unsure</option>
+            </select>
+          </label>
+          <label>
+            Preferred appointment type
+            <select name="appointment_type">
+              <option value="">Please select</option>
+              <option>In person, Springfield</option>
+              <option>Telehealth</option>
+              <option>Either</option>
+            </select>
+          </label>
+          <label>
+            How are you accessing our services?
+            <select name="access_pathway">
+              <option value="">Please select</option>
+              <option>Self-referral</option>
+              <option>GP-referral</option>
+              <option>WorkCover</option>
+              <option>NDIS</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Anything else you’d like us to know?
+          <textarea name="message" rows="5"></textarea>
+        </label>
+
+        <label class="form-note">
+          <input type="checkbox" name="enquiry_acknowledgement" value="Yes" required />
+          <span>
+            I understand this form is an initial enquiry only and does not
+            establish a therapeutic relationship. I understand that this form is
+            not monitored for urgent or crisis support. Within Psychology and
+            Assessment aims to reply within two business days.
+          </span>
+        </label>
+
+        <button class="btn primary" type="submit">Send Enquiry</button>
+      </form>
 
       <div class="hero-actions">
         <a class="btn primary" href="./about-us.html">About Us</a>
@@ -69,10 +144,20 @@
         <nav class="footer-links" aria-label="Legal">
           <a href="./disclaimer.html"><span class="footer-info-icon" aria-hidden="true">ⓘ</span> Disclaimer</a>
           <a href="./terms-and-conditions.html"><span class="footer-info-icon" aria-hidden="true">ⓘ</span> Terms &amp; Conditions</a>
+          <a href="./terms-of-payment.html">Terms of Payment</a>
           <a href="./privacy-policy.html"><span aria-hidden="true">🔒</span> Privacy Policy</a>
         </nav>
         <p>Within Psychology and Assessment © 2026. All Rights Reserved.</p>
       </div>
     </footer>
+    <script>
+      if (new URLSearchParams(window.location.search).get("sent") === "1") {
+        var notice = document.getElementById("enquiry-sent");
+        if (notice) {
+          notice.hidden = false;
+          notice.focus();
+        }
+      }
+    </script>
   </body>
 </html>

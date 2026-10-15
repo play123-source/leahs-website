@@ -192,7 +192,10 @@ h1 {
 }
 
 .intro {
-  max-width: 65ch;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
   color: var(--muted);
 }
 
@@ -269,6 +272,11 @@ h1 {
   text-align: left;
 }
 
+.about-feature-portrait {
+  margin: 0;
+  text-align: center;
+}
+
 .about-feature-photo {
   width: min(280px, 70vw);
   aspect-ratio: 4 / 5;
@@ -279,6 +287,13 @@ h1 {
   box-shadow: 0 12px 28px rgba(61, 71, 66, 0.12);
   display: block;
   background: #f4f2ef;
+}
+
+.about-feature-name {
+  margin: 0.75rem 0 0;
+  font-style: italic;
+  text-align: center;
+  color: var(--text);
 }
 
 .about-feature-copy {

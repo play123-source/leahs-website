@@ -371,10 +371,52 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   padding: 2.5rem 0 1rem;
+  align-items: stretch;
 }
 
 .fees-cards .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-align: center;
+}
+
+.fees-cards .card h3 {
+  margin: 0 0 0.75rem;
+  min-height: 2.6em;
+  text-align: center;
+}
+
+.fees-cards .card p {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.assessments-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.assessments-cards .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+.assessments-cards .card h3 {
+  margin: 0 0 0.75rem;
+  min-height: 2.6em;
+  text-align: center;
+}
+
+.assessments-cards .card p {
+  margin: 0;
+  flex: 1;
 }
 
 .fees-intro {
@@ -414,6 +456,10 @@ h1 {
   .fees-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .assessments-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 700px) {
@@ -424,6 +470,18 @@ h1 {
 
   .fees-cards {
     grid-template-columns: 1fr;
+  }
+
+  .fees-cards .card h3 {
+    min-height: 0;
+  }
+
+  .assessments-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .assessments-cards .card h3 {
+    min-height: 0;
   }
 }
 

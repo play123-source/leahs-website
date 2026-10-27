@@ -283,9 +283,8 @@ h1 {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   border: 1px solid var(--border);
-  box-shadow: 0 12px 28px rgba(61, 71, 66, 0.12);
   display: block;
   background: #f4f2ef;
 }

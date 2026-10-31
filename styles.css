@@ -110,6 +110,11 @@ img {
   font-weight: 700;
 }
 
+.service-notice a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .home-intro {
   display: grid;
   grid-template-columns: minmax(216px, 336px) 1fr;

@@ -39,9 +39,9 @@ img {
 }
 
 .brand-logo {
-  width: min(320px, 70vw);
+  width: min(480px, 85vw);
   display: block;
-  margin: 0 auto 1rem;
+  margin: 0 auto 18pt;
 }
 
 .home-page {
@@ -220,6 +220,14 @@ h1 {
   color: var(--muted);
 }
 
+.intro p {
+  margin: 0 0 1rem;
+}
+
+.intro p:last-child {
+  margin-bottom: 0;
+}
+
 .hero-actions,
 .booking-actions {
   display: flex;
@@ -239,10 +247,15 @@ h1 {
   text-align: center;
 }
 
-.booking-logo {
-  width: min(320px, 70vw);
+a:has(> .booking-logo) {
   display: block;
-  margin: 1rem auto;
+  line-height: 0;
+}
+
+.booking-logo {
+  width: min(480px, 85vw);
+  display: block;
+  margin: 0.25rem auto 18pt;
 }
 
 .booking-boxes {
@@ -586,8 +599,8 @@ h1 {
 
   .brand-logo,
   .booking-logo {
-    width: min(240px, 72vw);
-    margin-bottom: 0.5rem;
+    width: min(360px, 88vw);
+    margin-bottom: 18pt;
   }
 
   .home-availability {
@@ -773,6 +786,34 @@ a.card:hover {
   margin: 0 auto 1.5rem;
 }
 
+.coaching-block {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.coaching-block h1 {
+  white-space: nowrap;
+  text-align: center;
+}
+
+.coaching-copy {
+  max-width: none;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .coaching-block {
+    width: 100%;
+  }
+
+  .coaching-block h1 {
+    white-space: normal;
+  }
+}
+
 .legal-content p {
   color: var(--muted);
   margin: 0 0 1rem;
@@ -787,10 +828,19 @@ a.card:hover {
   text-align: center;
 }
 
+.legal-content ul,
 .legal-content ol {
   color: var(--muted);
   margin: 0 0 1rem;
   padding-left: 1.4rem;
+}
+
+.legal-content li {
+  margin: 0 0 0.75rem;
+}
+
+.legal-content li:last-child {
+  margin-bottom: 0;
 }
 
 .legal-content ol ol {
